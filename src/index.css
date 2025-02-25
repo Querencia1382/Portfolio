@@ -12,6 +12,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.nav-container-2 {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 18px;
 }
 

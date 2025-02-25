@@ -10,10 +10,12 @@ export default function App() {
   return (
     <BrowserRouter>
     <nav className='nav-bar'>
-      <Link to="/" className="nav-anchor">Home</Link>
-      <Link to="/Products" className="nav-anchor">Products</Link>
-      <Link to="/Contact-us" className="nav-anchor">Contact-us</Link>
-      <Link to="/About-us" className="nav-anchor">About-us</Link>
+      <div className='nav-container-2'>
+        <Link to="/" className="nav-anchor">Home</Link>
+        <Link to="/Products" className="nav-anchor">Products</Link>
+        <Link to="/Contact-us" className="nav-anchor">Contact-us</Link>
+        <Link to="/About-us" className="nav-anchor">About-us</Link>
+      </div>
       <div className='nav-container'>
         <Link to="/Cart" className="nav-anchor">Cart</Link>
         {account != null ? <Link to="/Account" className="nav-anchor">Account</Link> : <Link to="/Log-in" className="nav-anchor">Log-in</Link>}
