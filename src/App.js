@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter , Routes , Route , Link} from "react-router-dom"
+import { BrowserRouter , Routes , Route , Link } from "react-router-dom"
 
 
 export default function App() {
@@ -10,24 +10,22 @@ export default function App() {
   return (
     <BrowserRouter>
     <nav className='nav-bar'>
-      <div className='nav-container-2'>
-        <Link to="/" className="nav-anchor">Home</Link>
-        <Link to="/Products" className="nav-anchor">Products</Link>
-        <Link to="/Contact-us" className="nav-anchor">Contact-us</Link>
-        <Link to="/About-us" className="nav-anchor">About-us</Link>
-      </div>
-      <div className='nav-container'>
-        <Link to="/Cart" className="nav-anchor">Cart</Link>
-        {account != null ? <Link to="/Account" className="nav-anchor">Account</Link> : <Link to="/Log-in" className="nav-anchor">Log-in</Link>}
-      </div>
+      <img src="" className="nav-img"/>
+      <h3 className='nav-h3'>E-commerce</h3>
+      <Link to="/" className="nav-anchor-txt">Home</Link>
+      <Link to="/Products" className="nav-anchor-txt">Products</Link>
+      <Link to="/Contact-us" className="nav-anchor-txt">Contact-us</Link>
+      <Link to="/About-us" className="nav-anchor-txt">About-us</Link>
+      <Link to="/Cart" className="nav-anchor-btn">Cart</Link>
+      {account != null ? <Link to="/Account" className="nav-anchor-btn">Account</Link> : <Link to="/Log-in" className="nav-anchor-btn">Log-in</Link>}
     </nav>
       <Routes>
-        <Route path='/' element={<h1>E-commerce</h1>}/>
+        <Route path='/' element={<h1>Home</h1>}/>
         <Route path='/Products' element={<h1>Products</h1>}/>
         <Route path='/Products/:id' element={<h1>Product</h1>}/>
         <Route path='/Account' element={<h1>Account</h1>}/>
         <Route path='/Log-in' element={<h1>Log-in</h1>}/>
-        <Route path='/Transactions' element={<h1>Transactions</h1>}/>
+        <Route path='/Transactions/:id' element={<h1>Transactions</h1>}/>
         <Route path='/Cart' element={<h1>Cart</h1>}/>
         <Route path='/About-us' element={<h1>About us</h1>}/>
         <Route path='/Contact-us' element={<h1>Contact us</h1>}/>
