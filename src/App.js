@@ -11,7 +11,7 @@ export default function App() {
     <BrowserRouter>
     <nav className='nav-bar'>
       <img src="" className="nav-img"/>
-      <h3 className='h3'>E-commerce</h3>
+      <h3 className='h3 ma'>E-commerce</h3>
       <Link to="/" className="nav-anchor-txt">Home</Link>
       <Link to="/Products" className="nav-anchor-txt">Products</Link>
       <Link to="/Contact-us" className="nav-anchor-txt">Contact-us</Link>
