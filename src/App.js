@@ -11,7 +11,7 @@ export default function App() {
     <BrowserRouter>
     <nav className='nav-bar'>
       <img src="" className="nav-img"/>
-      <h3 className='nav-h3'>E-commerce</h3>
+      <h3 className='h3'>E-commerce</h3>
       <Link to="/" className="nav-anchor-txt">Home</Link>
       <Link to="/Products" className="nav-anchor-txt">Products</Link>
       <Link to="/Contact-us" className="nav-anchor-txt">Contact-us</Link>
@@ -30,6 +30,31 @@ export default function App() {
         <Route path='/About-us' element={<h1>About us</h1>}/>
         <Route path='/Contact-us' element={<h1>Contact us</h1>}/>
       </Routes>
+      <footer className='footer'>
+        <div className='footer-div-1'>
+          <img src="" className="nav-img"/>
+          <h3 className='h3'>E-commerce</h3>
+          <a className='div--anchor' href=''>
+            <img src='' className='icon'/>
+            <h3 className='h3'>Telegram</h3>
+          </a>
+          <a className='div--anchor' href=''>
+            <img src='' className='icon'/>
+            <h3 className='h3'>Instagram</h3>
+          </a>
+          <a className='div--anchor' href=''>
+            <img src='' className='icon'/>
+            <h3 className='h3'>Email</h3>
+          </a>
+        </div>
+        <div className='footer-div-2'>
+          <Link to="/" className="nav-anchor-txt">Home</Link>
+          <Link to="/Products" className="nav-anchor-txt">Products</Link>
+          <Link to="/Contact-us" className="nav-anchor-txt">Contact-us</Link>
+          <Link to="/About-us" className="nav-anchor-txt">About-us</Link>
+        </div>
+        <p className='p'>All the rights belong to the E-commerce website</p>
+      </footer>
     </BrowserRouter>
   )
 };
