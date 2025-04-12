@@ -1,5 +1,9 @@
 import React from 'react';
 import { BrowserRouter , Routes , Route , Link } from "react-router-dom"
+import Logo from "../src/icons/VK-SVG.svg"
+import accountSvg from "../src/icons/Account-SVG.svg"
+import cartSvg from "../src/icons/Cart-SVG.svg"
+import loginSvg from "../src/icons/Login-SVG.svg"
 
 
 export default function App() {
@@ -10,8 +14,8 @@ export default function App() {
   return (
     <BrowserRouter>
     <nav className='nav-bar'>
-      <img src="" className="nav-img"/>
-      <h3 className='h3 ma'>E-commerce</h3>
+      <img srcSet={Logo} className="nav-img"/>
+      <h3 className='h3 ma'>VK Boutique</h3>
       <Link to="/" className="nav-anchor-txt">Home</Link>
       <Link to="/Products" className="nav-anchor-txt">Products</Link>
       <Link to="/Contact-us" className="nav-anchor-txt">Contact-us</Link>

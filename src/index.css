@@ -1,7 +1,17 @@
+@font-face {
+    font-family: Poppins;
+    src: url("../src/font/Poppins-Light.ttf");
+    font-weight: 300;
+}
+
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+h1, h2, h3, a {
+    font-family: Poppins;
 }
 
 .nav-bar {
