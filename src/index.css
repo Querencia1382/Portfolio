@@ -8,10 +8,10 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Poppins;
 }
 
 h1, h2, h3, a {
-    font-family: Poppins;
     margin: 0;
     padding: 0;
 }
@@ -66,4 +66,56 @@ h1, h2, h3, a {
     width: 36px;
     aspect-ratio: 1/1;
     object-fit: contain;
+}
+
+.footer-div-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.rm {
+    margin-right: 48px;
+}
+
+.footer--anchor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 6px;
+    padding: 4px;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+.footer--anchor:hover {
+    box-shadow: 0 1px black;
+}
+
+.icon {
+    width: 24px;
+    aspect-ratio: 1/1;
+}
+
+.footer--anchor .h3 {
+    font-size: 16px;
+}
+
+.footer-div-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin: 16px 0;
+}
+
+.p {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
 }
