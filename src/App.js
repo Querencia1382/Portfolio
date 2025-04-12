@@ -14,7 +14,6 @@ export default function App() {
   return (
     <BrowserRouter>
     <nav className='nav-bar'>
-      {/* <img srcSet={Logo} className="nav-img"/> */}
       <h3 className='h3 ma'>VK Boutique</h3>
       <Link to="/" className="nav-anchor-txt">Home</Link>
       <Link to="/Products" className="nav-anchor-txt">Products</Link>
