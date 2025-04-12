@@ -12,28 +12,58 @@ body {
 
 h1, h2, h3, a {
     font-family: Poppins;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-bar {
     display: flex;
     justify-content:  baseline;
     align-items: center;
-    padding: 6px 24px 6px 6px;
+    padding: 12px 18px;
     margin: 0;
-    gap: 12px;
+    gap: 24px;
     box-sizing: border-box;
 }
+
 .ma {
     margin-right: auto;
 }
 
+.nav-img {
+    width: 56px;
+    margin: 0;
+}
+
 .h3 {
-    font-size: 18px;
+    font-size: 26px;
     font-weight: normal;
 }
 
 .nav-anchor-txt {
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
     color: black;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+.nav-anchor-txt:hover {
+    box-shadow: 0 1px black;
+}
+
+.nav-anchor-btn {
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 1/1;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-anchor-btn img {
+    width: 36px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
 }

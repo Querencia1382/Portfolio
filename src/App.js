@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter , Routes , Route , Link } from "react-router-dom"
 import Logo from "../src/icons/VK-SVG.svg"
 import accountSvg from "../src/icons/Account-SVG.svg"
-import cartSvg from "../src/icons/Cart-SVG.svg"
-import loginSvg from "../src/icons/Login-SVG.svg"
+import cartSvg from "../src/icons/Cart2-SVG.svg"
+import loginSvg from "../src/icons/Login2-SVG.svg"
 
 
 export default function App() {
@@ -14,14 +14,14 @@ export default function App() {
   return (
     <BrowserRouter>
     <nav className='nav-bar'>
-      <img srcSet={Logo} className="nav-img"/>
+      {/* <img srcSet={Logo} className="nav-img"/> */}
       <h3 className='h3 ma'>VK Boutique</h3>
       <Link to="/" className="nav-anchor-txt">Home</Link>
       <Link to="/Products" className="nav-anchor-txt">Products</Link>
       <Link to="/Contact-us" className="nav-anchor-txt">Contact-us</Link>
       <Link to="/About-us" className="nav-anchor-txt">About-us</Link>
-      <Link to="/Cart" className="nav-anchor-btn">Cart</Link>
-      {account != null ? <Link to="/Account" className="nav-anchor-btn">Account</Link> : <Link to="/Log-in" className="nav-anchor-btn">Log-in</Link>}
+      <Link to="/Cart" className="nav-anchor-btn"><img srcSet={cartSvg} /></Link>
+      {account != null ? <Link to="/Account" className="nav-anchor-btn"><img srcSet={accountSvg} /></Link> : <Link to="/Log-in" className="nav-anchor-btn"><img srcSet={loginSvg} /></Link>}
     </nav>
       <Routes>
         <Route path='/' element={<h1>Home</h1>}/>
