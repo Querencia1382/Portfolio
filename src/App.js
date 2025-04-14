@@ -7,7 +7,7 @@ import loginSvg from "../src/icons/Login2-SVG.svg"
 import telegramSvg from "../src/icons/Telegram-SVG.svg"
 import instagramSvg from "../src/icons/Instagram-SVG.svg"
 import emailSvg from "../src/icons/Email-SVG.svg"
-
+import Hero from './Pages/Home/Components/hero';
 
 export default function App() {
 
@@ -26,7 +26,7 @@ export default function App() {
       {account != null ? <Link to="/Account" className="nav-anchor-btn"><img srcSet={accountSvg} style={{width: "30px"}}/></Link> : <Link to="/Log-in" className="nav-anchor-btn"><img srcSet={loginSvg} /></Link>}
     </nav>
       <Routes>
-        <Route path='/' element={<h1>Home</h1>}/>
+        <Route path='/' element={<Hero />}/>
         <Route path='/Products' element={<h1>Products</h1>}/>
         <Route path='/Products/:id' element={<h1>Product</h1>}/>
         <Route path='/Account' element={<h1>Account</h1>}/>
