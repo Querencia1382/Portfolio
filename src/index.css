@@ -124,3 +124,86 @@ h1, h2, h3, a {
     margin: 0;
     padding: 0;
 }
+
+.hero {
+    height: calc(100dvh - 63px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+.hero h2 {
+    font-size: 26px;
+}
+
+.hero p {
+    font-size: 16px;
+}
+
+.item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 6%;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.item--intro {
+    width: 36%;
+}
+
+.hero--btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.arrow--btn {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    width: 32px;
+    aspect-ratio: 1/1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.arrow--btn img {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.number--btn {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 32px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-family: Poppins;
+    cursor: pointer;
+}
+
+.current--number {
+    box-shadow: 0 1px black;
+}

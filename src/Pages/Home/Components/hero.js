@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import rightArrowSvg from "../../../icons/arrow-narrow-right-Svg.svg"
+import leftArrowSvg from "../../../icons/arrow-narrow-left-Svg.svg"
 
 
 export default function Hero(){
@@ -7,43 +9,58 @@ export default function Hero(){
    const [items , setItems] = React.useState(null)
 
 
-    const [currentItem , setCurrent] = React.useState(0)
-
-
-    const changeCurrent = React.useCallback((input , current) => {
-        switch(true){
-            case (input == "next" && current < 3):
-                setCurrent(prevCurrent => prevCurrent + 1)
-                break
-            case (input == "prev" && current > 0):
-                setCurrent(prevCurrent => prevCurrent - 1)
-                break
-            case (input == 0) :
-                setCurrent(0)
-                break
-            case (input == 1) :
-                setCurrent(1)
-                break
-            case (input == 2) :
-                setCurrent(2)
-                break
-            case (input == 3) :
-                setCurrent(3)
-                break
-            default :
-                return null
-        }
-    },[])
-
-
-    React.useEffect(() => {
-        const dataFetcher = async () => {
+   React.useEffect(() => {
+    const dataFetcher = async () => {
             const req = await fetch("https://fakestoreapi.com/products")
             const data = await req.json()
             setItems(data)
         }
-    
+
         dataFetcher()
+    },[])
+
+
+    const [currentItem , setCurrent] = React.useState(0)
+
+
+    const numberBtns = React.useRef(document.getElementsByClassName("number--btn"))
+
+
+    const changeCurrent = React.useCallback((input , current) => {
+        switch(true){
+            case (input === "next" && current < 3):
+                numberBtns.current[current].classList.remove("current--number")
+                setCurrent(prevCurrent => prevCurrent + 1)
+                numberBtns.current[current + 1].classList.add("current--number")
+                break
+            case (input === "prev" && current > 0):
+                numberBtns.current[current].classList.remove("current--number")
+                setCurrent(prevCurrent => prevCurrent - 1)
+                numberBtns.current[current - 1].classList.add("current--number")
+                break
+            case (input === 0) :
+                setCurrent(0)
+                numberBtns.current[current].classList.remove("current--number")
+                numberBtns.current[input].classList.add("current--number")
+                break
+            case (input === 1) :
+                setCurrent(1)
+                numberBtns.current[current].classList.remove("current--number")
+                numberBtns.current[input].classList.add("current--number")
+                break
+            case (input === 2) :
+                setCurrent(2)
+                numberBtns.current[current].classList.remove("current--number")
+                numberBtns.current[input].classList.add("current--number")
+                break
+            case (input === 3) :
+                setCurrent(3)
+                numberBtns.current[current].classList.remove("current--number")
+                numberBtns.current[input].classList.add("current--number")
+                break
+            default :
+                return null
+        }
     },[])
 
 
@@ -52,7 +69,9 @@ export default function Hero(){
             <div className="hero">
                 <h1>Newest</h1>
                 <div className="item">
-                    <img src={items[currentItem].image} />
+                    {/* <div className="item--imgs">
+                        <img src={items[currentItem].image} className="item--img hero--0" alt={items[currentItem].title}/>
+                    </div> */}
                     <div className="item--intro">
                         <h2>{items[currentItem].title}</h2>
                         <p>{items[currentItem].description} <Link to="/" className="nav-anchor-txt">Visit</Link></p>
@@ -61,22 +80,26 @@ export default function Hero(){
                 <div className="hero--btns">
                     <button className="arrow--btn" onClick={() => {
                         changeCurrent("prev", currentItem)
-                    }}>prev</button>
-                    <button className="circle--btn"onClick={() => {
+                    }}>
+                        <img srcSet={leftArrowSvg} />
+                    </button>
+                    <button className="number--btn current--number"onClick={() => {
                         changeCurrent(0, currentItem)
                     }}>1</button>
-                    <button className="circle--btn"onClick={() => {
+                    <button className="number--btn"onClick={() => {
                         changeCurrent(1, currentItem)
                     }}>2</button>
-                    <button className="circle--btn"onClick={() => {
+                    <button className="number--btn"onClick={() => {
                         changeCurrent(2, currentItem)
                     }}>3</button>
-                    <button className="circle--btn"onClick={() => {
+                    <button className="number--btn"onClick={() => {
                         changeCurrent(3, currentItem)
                     }}>4</button>
                     <button className="arrow--btn"onClick={() => {
                         changeCurrent("next", currentItem)
-                    }}>next</button>
+                    }}>
+                        <img srcSet={rightArrowSvg} />
+                    </button>
                 </div>
             </div>
         )
@@ -87,3 +110,7 @@ export default function Hero(){
         )
     }
 }
+
+{/* <img src={items[1].image} className="item--img hero--1" alt={items[1].title}/>
+<img src={items[2].image} className="item--img hero--2" alt={items[2].title}/>
+<img src={items[3].image} className="item--img hero--3" alt={items[3].title}/> */}
