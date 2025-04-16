@@ -69,9 +69,7 @@ export default function Hero(){
             <div className="hero">
                 <h1>Newest</h1>
                 <div className="item">
-                    {/* <div className="item--imgs">
-                        <img src={items[currentItem].image} className="item--img hero--0" alt={items[currentItem].title}/>
-                    </div> */}
+                    <img src={items[currentItem].image} className="item--img" alt={items[currentItem].title}/>
                     <div className="item--intro">
                         <h2>{items[currentItem].title}</h2>
                         <p>{items[currentItem].description} <Link to="/" className="nav-anchor-txt">Visit</Link></p>
@@ -111,6 +109,6 @@ export default function Hero(){
     }
 }
 
-{/* <img src={items[1].image} className="item--img hero--1" alt={items[1].title}/>
-<img src={items[2].image} className="item--img hero--2" alt={items[2].title}/>
-<img src={items[3].image} className="item--img hero--3" alt={items[3].title}/> */}
+{/*                         <img src={items[1].image} className="item--img hero--1" alt={items[1].title}/>
+                        <img src={items[2].image} className="item--img hero--2" alt={items[2].title}/>
+                        <img src={items[3].image} className="item--img hero--3" alt={items[3].title}/>*/}
