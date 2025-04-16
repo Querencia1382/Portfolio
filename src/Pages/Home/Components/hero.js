@@ -9,7 +9,7 @@ export default function Hero(){
    const [items , setItems] = React.useState(null)
 
 
-   React.useEffect(() => {
+   React.useLayoutEffect(() => {
     const dataFetcher = async () => {
             const req = await fetch("https://fakestoreapi.com/products")
             const data = await req.json()
@@ -67,12 +67,14 @@ export default function Hero(){
     if(items){
         return (
             <div className="hero">
-                <h1>Newest</h1>
-                <div className="item">
-                    <img src={items[currentItem].image} className="item--img" alt={items[currentItem].title}/>
-                    <div className="item--intro">
-                        <h2>{items[currentItem].title}</h2>
-                        <p>{items[currentItem].description} <Link to="/" className="nav-anchor-txt">Visit</Link></p>
+                <h1 className="hero--h1">Newest</h1>
+                <img src={items[currentItem].image} className="hero--img" alt={items[currentItem].title}/>
+                <div className="hero--detail">
+                    <h2>{items[currentItem].title}</h2>
+                    <p>{items[currentItem].description}</p>
+                    <div className="detail--sb">
+                        <h3>Price : {items[currentItem].price}$</h3>
+                        <Link to="/" className="hero--detail--anchor">Visit</Link>
                     </div>
                 </div>
                 <div className="hero--btns">
@@ -111,4 +113,6 @@ export default function Hero(){
 
 {/*                         <img src={items[1].image} className="item--img hero--1" alt={items[1].title}/>
                         <img src={items[2].image} className="item--img hero--2" alt={items[2].title}/>
-                        <img src={items[3].image} className="item--img hero--3" alt={items[3].title}/>*/}
+                        <img src={items[3].image} className="item--img hero--3" alt={items[3].title}/>
+                                        <div className="item">
+                    */}
