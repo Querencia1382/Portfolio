@@ -147,9 +147,3 @@ export default function Hero(){
         )
     }
 }
-
-{/*                         <img src={items[1].image} className="item--img hero--1" alt={items[1].title}/>
-                        <img src={items[2].image} className="item--img hero--2" alt={items[2].title}/>
-                        <img src={items[3].image} className="item--img hero--3" alt={items[3].title}/>
-                                        <div className="item">
-                    */}

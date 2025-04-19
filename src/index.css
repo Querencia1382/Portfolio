@@ -192,14 +192,14 @@ h1, h2, h3, a {
 .hero--detail {
     grid-area: detail;
     place-self: center;
-    padding: 0 48px 48px;
+    padding: 0 3rem;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 16px;
+    gap: 1rem;
     box-sizing: border-box;
 }
 
@@ -207,11 +207,10 @@ h1, h2, h3, a {
     width: 100%;
     padding: 0;
     margin: 0;
-    margin-bottom: 16px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    gap: 26px;
+    gap: 1.5rem;
     box-sizing: border-box;
 }
 
@@ -220,35 +219,35 @@ h1, h2, h3, a {
     aspect-ratio: 4/5;
     object-fit: cover;
     border-radius: 12px;
-    padding: 8px;
+    padding: 8px 12px;
     margin: 0;
     background-color: white;
     box-sizing: border-box;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.400);
+    box-shadow: 0 0 8px 0 var(--wine);
     cursor: pointer;
 }
 
 .hero--h1 {
     grid-area: h1;
-    font-size: 42px;
+    font-size: 2.5rem;
     place-self: center;
     max-width: 80%;
 }
 
 .hero h2 {
-    font-size: 25px;
+    font-size: 1.6rem;
     max-width: 80%;
 }
 
 .hero h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
     display: inline;
 }
 
 .hero p {
-    font-size: 16px;
+    font-size: 1rem;
     width: 80%;
-    margin: 16px;
+    margin: 1rem;
     text-align: justify;
     line-height: 1.6;
     letter-spacing: 0.3px;
@@ -307,6 +306,6 @@ h1, h2, h3, a {
     padding: 18px;
     box-sizing: border-box;
     object-fit: cover;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.400);
+    box-shadow: 0 0 12px 0 var(--wine);
     border-radius: 24px;
 }
