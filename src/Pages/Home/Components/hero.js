@@ -70,6 +70,35 @@ export default function Hero(){
                 <h1 className="hero--h1">Newest</h1>
                 <img src={items[currentItem].image} className="hero--img" alt={items[currentItem].title}/>
                 <div className="hero--detail">
+                    <div className="detail--imgs">
+                        <img 
+                            src={items[(currentItem + 1) % 4].image} 
+                            className="detail--img" 
+                            onClick={() => {
+                                changeCurrent((currentItem + 1) % 4, currentItem)
+                                }
+                            } 
+                            alt={items[(currentItem + 1) % 4].title}
+                        />
+                        <img 
+                            src={items[(currentItem + 2) % 4].image} 
+                            className="detail--img" 
+                            onClick={() => {
+                                changeCurrent((currentItem + 2) % 4, currentItem)
+                                }
+                            } 
+                            alt={items[(currentItem + 2) % 4].title}
+                        />
+                        <img 
+                            src={items[(currentItem + 3) % 4].image} 
+                            className="detail--img" 
+                            onClick={() => {
+                                changeCurrent((currentItem + 3) % 4, currentItem)
+                                }
+                            } 
+                            alt={items[(currentItem + 3) % 4].title}
+                        />
+                    </div>
                     <h2>{items[currentItem].title}</h2>
                     <p>{items[currentItem].description}</p>
                     <div className="detail--sb">
@@ -78,9 +107,13 @@ export default function Hero(){
                     </div>
                 </div>
                 <div className="hero--btns">
-                    <button className="arrow--btn" onClick={() => {
-                        changeCurrent("prev", currentItem)
-                    }}>
+                    <button 
+                        className="arrow--btn" 
+                        onClick={() => {
+                            changeCurrent("prev", currentItem)
+                            }
+                        }
+                    >
                         <img srcSet={leftArrowSvg} />
                     </button>
                     <button className="number--btn current--number"onClick={() => {
@@ -95,9 +128,13 @@ export default function Hero(){
                     <button className="number--btn"onClick={() => {
                         changeCurrent(3, currentItem)
                     }}>4</button>
-                    <button className="arrow--btn"onClick={() => {
-                        changeCurrent("next", currentItem)
-                    }}>
+                    <button 
+                        className="arrow--btn"
+                        onClick={() => {
+                            changeCurrent("next", currentItem)
+                            }
+                        }
+                    >
                         <img srcSet={rightArrowSvg} />
                     </button>
                 </div>

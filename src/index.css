@@ -48,7 +48,7 @@ h1, h2, h3, a {
 .nav-anchor-txt {
     font-size: 16px;
     text-decoration: none;
-    color: var(--wine);
+    color: black;
     cursor: pointer;
 }
 
@@ -192,7 +192,40 @@ h1, h2, h3, a {
 .hero--detail {
     grid-area: detail;
     place-self: center;
-    padding: 48px;
+    padding: 0 48px 48px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+.detail--imgs {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 26px;
+    box-sizing: border-box;
+}
+
+.detail--img {
+    height: 136px;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: 12px;
+    padding: 8px;
+    margin: 0;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.400);
+    cursor: pointer;
 }
 
 .hero--h1 {
@@ -271,4 +304,9 @@ h1, h2, h3, a {
     grid-area: img;
     place-self: center;
     height: 100%;
+    padding: 18px;
+    box-sizing: border-box;
+    object-fit: cover;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.400);
+    border-radius: 24px;
 }
