@@ -67,7 +67,7 @@ export default function Hero(){
     if(items){
         return (
             <div className="hero">
-                <h1 className="hero--h1">Newest</h1>
+                <h2 className="hero--h1">Newest</h2>
                 <img src={items[currentItem].image} className="hero--img" alt={items[currentItem].title}/>
                 <div className="hero--detail">
                     <div className="detail--imgs">
@@ -99,7 +99,7 @@ export default function Hero(){
                             alt={items[(currentItem + 3) % 4].title}
                         />
                     </div>
-                    <h2>{items[currentItem].title}</h2>
+                    <h2 className="hero--h2">{items[currentItem].title}</h2>
                     <p>{items[currentItem].description}</p>
                     <div className="detail--sb">
                         <h3>Price : {items[currentItem].price}$</h3>

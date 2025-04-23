@@ -14,9 +14,12 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: Poppins;
+    background-image: radial-gradient(at 50% 50%, var(--wine), var(--dutch-white));
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-h1, h2, h3, a {
+h1, h2, h3, h4, a {
     font-weight: 300;
     margin: 0;
     padding: 0;
@@ -30,6 +33,7 @@ h1, h2, h3, a {
     margin: 0;
     gap: 24px;
     box-sizing: border-box;
+    background-color: white;
 }
 
 .ma {
@@ -73,7 +77,9 @@ h1, h2, h3, a {
 }
 
 .footer {
-    padding-bottom: 16px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 24px 24px 0 0;
 }
 
 .footer-div-1 {
@@ -141,6 +147,9 @@ h1, h2, h3, a {
     ;
     padding-bottom: 16px;
     box-sizing: border-box;
+    border-radius:0 0 24px 24px;
+    margin-bottom: 24px;
+    background-color: white;
 }
 
 .hero--btns {
@@ -229,12 +238,16 @@ h1, h2, h3, a {
 
 .hero--h1 {
     grid-area: h1;
-    font-size: 2.5rem;
+    width: 100%;
+    height: 100%;
     place-self: center;
-    max-width: 80%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
 }
 
-.hero h2 {
+.hero--h2 {
     font-size: 1.6rem;
     max-width: 80%;
 }
@@ -308,4 +321,114 @@ h1, h2, h3, a {
     object-fit: cover;
     box-shadow: 0 0 12px 0 var(--wine);
     border-radius: 24px;
+}
+
+.discounts {
+    padding-top: 24px;
+    border-radius: 24px;
+    margin-bottom: 24px;
+    background-color: white;
+}
+
+.discounts--h2 {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.6rem;
+    margin: 0 auto;
+}
+
+.discounts--div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 36px;
+    padding: 36px;
+    padding-top: 32px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.discounted {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding: 20px;
+    margin: 0;
+    flex: 0 0 273px;
+    box-sizing: border-box;
+    box-shadow: 0 0 12px 0 var(--wine);
+    border-radius: 24px;
+    position: relative;
+}
+
+/* .discounted::after {
+    content: attr(data-discount);
+    position: absolute;
+    background-color: var(--dutch-white);
+    color: black;
+    border-radius: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.75rem;
+    font-weight: normal;
+    top: 12px;
+    left: 12px;
+} */
+
+.discounted--img {
+    object-fit: contain;
+    width: 80%;
+    aspect-ratio: 1/1;
+}
+
+.discounted--h2 {
+    font-size: 16px;
+    width: 225px;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    overflow: hidden;
+}
+
+.discounted--div {
+    width: 225px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.discounted--h4 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.discounted--h4::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 6px);
+    height: 1px;
+    background-color: black;
+    transform: rotateZ(15deg);
+}
+
+.discounted--a {
+    text-decoration: none;
+    background-color: var(--wine);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    margin: 0;
+    font-size: 1rem;
+    white-space: nowrap;
+    border-radius: 0.5rem;
 }

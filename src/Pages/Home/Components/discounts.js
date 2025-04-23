@@ -1,6 +1,6 @@
 import React from "react"
 import Discounted from "./discounted-Item";
-import bellSvg from "../../../icons/Thin-Bell-SVG.svg"
+import bellSvg from "../../../icons/Filled-Bell-2D-SVG.svg"
 
 
 export default function Discounts(){
@@ -34,7 +34,8 @@ export default function Discounts(){
 
     return (
         <div className="discounts">
-            <p className="discounts--p">We love you all se here are some discounts for you <img srcSet={bellSvg} width='24px'/></p>
+            {/* <h3 className="discounts--h3">We love you all so here are some discounts for you <img srcSet={bellSvg} width='24px'/></h3> */}
+            <h2 className="discounts--h2"><img srcSet={bellSvg} width='24px'/>Discounts<img srcSet={bellSvg} width='24px'/></h2>
             <div className="discounts--div">
                 {items}
             </div>

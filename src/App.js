@@ -7,8 +7,7 @@ import loginSvg from "../src/icons/Login2-SVG.svg"
 import telegramSvg from "../src/icons/Telegram-SVG.svg"
 import instagramSvg from "../src/icons/Instagram-SVG.svg"
 import emailSvg from "../src/icons/Email-SVG.svg"
-import Hero from './Pages/Home/Components/hero';
-import Discounts from './Pages/Home/Components/discounts';
+import Home from './Pages/Home/home';
 
 export default function App() {
 
@@ -18,7 +17,7 @@ export default function App() {
   return (
     <BrowserRouter>
     <nav className='nav-bar'>
-      <h3 className='h3 ma'>VK Boutique</h3>
+      <h1 className='h3 ma'>VK Boutique</h1>
       <Link to="/" className="nav-anchor-txt">Home</Link>
       <Link to="/Products" className="nav-anchor-txt">Products</Link>
       <Link to="/Contact-us" className="nav-anchor-txt">Contact us</Link>
@@ -27,7 +26,7 @@ export default function App() {
       {account != null ? <Link to="/Account" className="nav-anchor-btn"><img srcSet={accountSvg} style={{width: "30px"}}/></Link> : <Link to="/Log-in" className="nav-anchor-btn"><img srcSet={loginSvg} /></Link>}
     </nav>
       <Routes>
-        <Route path='/' element={<Discounts />}/>
+        <Route path='/' element={<Home />}/>
         <Route path='/Products' element={<h1>Products</h1>}/>
         <Route path='/Products/:id' element={<h1>Product</h1>}/>
         <Route path='/Account' element={<h1>Account</h1>}/>
