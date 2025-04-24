@@ -14,9 +14,9 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: Poppins;
-    background-image: radial-gradient(at 50% 50%, var(--wine), var(--dutch-white));
+    /* background-image: radial-gradient(at 50% 50%, var(--wine), var(--dutch-white));
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 h1, h2, h3, h4, a {
@@ -79,7 +79,7 @@ h1, h2, h3, h4, a {
 .footer {
     padding: 16px;
     background-color: white;
-    border-radius: 24px 24px 0 0;
+    /* border-radius: 24px 24px 0 0; */
 }
 
 .footer-div-1 {
@@ -147,8 +147,8 @@ h1, h2, h3, h4, a {
     ;
     padding-bottom: 16px;
     box-sizing: border-box;
-    border-radius:0 0 24px 24px;
-    margin-bottom: 24px;
+    /* border-radius:0 0 24px 24px;
+    margin-bottom: 24px; */
     background-color: white;
 }
 
@@ -325,8 +325,8 @@ h1, h2, h3, h4, a {
 
 .discounts {
     padding-top: 24px;
-    border-radius: 24px;
-    margin-bottom: 24px;
+    /* border-radius: 24px;
+    margin-bottom: 24px; */
     background-color: white;
 }
 
@@ -341,16 +341,27 @@ h1, h2, h3, h4, a {
 }
 
 .discounts--div {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 36px;
-    padding: 36px;
-    padding-top: 32px;
-    margin: 0;
     width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 2.25rem;
+    padding: 2.25rem;
+    padding-top: 2rem;
+    margin: 0;
     box-sizing: border-box;
+    overflow-x: auto;
+    scrollbar-width:thin;
+    scrollbar-color: var(--wine) white;
+}
+
+.discounts--div::-webkit-scrollbar {
+    width: 12px;
+}
+
+.discounts--div::-webkit-scrollbar-track-piece {
+    border-radius: 12px;
 }
 
 .discounted {

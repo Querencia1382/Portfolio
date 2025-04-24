@@ -34,8 +34,11 @@ export default function Discounts(){
 
     return (
         <div className="discounts">
-            {/* <h3 className="discounts--h3">We love you all so here are some discounts for you <img srcSet={bellSvg} width='24px'/></h3> */}
-            <h2 className="discounts--h2"><img srcSet={bellSvg} width='24px'/>Discounts<img srcSet={bellSvg} width='24px'/></h2>
+            {/* <h3 className="discounts--h3">We love you all so here are some discounts for you <img srcSet={bellSvg} width='24px'/></h3> 
+            <img srcSet={bellSvg} width='24px'/>
+<img srcSet={bellSvg} width='24px'/>
+            */}
+            <h2 className="discounts--h2">Discounts</h2>
             <div className="discounts--div">
                 {items}
             </div>
