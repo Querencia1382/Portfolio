@@ -8,6 +8,7 @@ import telegramSvg from "../src/icons/Telegram-SVG.svg"
 import instagramSvg from "../src/icons/Instagram-SVG.svg"
 import emailSvg from "../src/icons/Email-SVG.svg"
 import Home from './Pages/Home/home';
+import MostPopular from './Pages/Home/Components/mostPopulars';
 
 export default function App() {
 

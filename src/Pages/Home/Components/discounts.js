@@ -1,6 +1,5 @@
 import React from "react"
 import Discounted from "./discounted-Item";
-import bellSvg from "../../../icons/Filled-Bell-2D-SVG.svg"
 
 
 export default function Discounts(){
@@ -22,7 +21,7 @@ export default function Discounts(){
                     }
                     randomValue = Math.random() * 10
                     if(randomValue > 5){
-                        displayItems.push(<Discounted key={data[i].id} item={data[i]} randomValue={randomValue}/>)
+                        displayItems.push(<Discounted key={data[i].id} item={data[i]}/>)
                         counter += 1
                     }
                 }
@@ -34,14 +33,17 @@ export default function Discounts(){
 
     return (
         <div className="discounts">
-            {/* <h3 className="discounts--h3">We love you all so here are some discounts for you <img srcSet={bellSvg} width='24px'/></h3> 
-            <img srcSet={bellSvg} width='24px'/>
-<img srcSet={bellSvg} width='24px'/>
-            */}
-            <h2 className="discounts--h2">Discounts</h2>
+            <h2 className="title--h2">Discounts</h2>
             <div className="discounts--div">
                 {items}
             </div>
         </div>
     )
 }
+
+            {/* 
+                import bellSvg from "../../../icons/Filled-Bell-2D-SVG.svg"
+                <h3 className="discounts--h3">We love you all so here are some discounts for you <img srcSet={bellSvg} width='24px'/></h3> 
+                <img srcSet={bellSvg} width='24px'/>
+                <img srcSet={bellSvg} width='24px'/>
+            */}
