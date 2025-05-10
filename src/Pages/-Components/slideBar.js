@@ -1,8 +1,8 @@
 import React from "react"
-import Discounted from "./discounted-Item";
+import Item from "./item"
 
 
-export default function Discounts(){
+export default function SlideBar(props){
 
     const [items , setItems] = React.useState([])
 
@@ -21,7 +21,7 @@ export default function Discounts(){
                     }
                     randomValue = Math.random() * 10
                     if(randomValue > 5){
-                        displayItems.push(<Discounted key={data[i].id} item={data[i]}/>)
+                        displayItems.push(<Item key={data[i].id} item={data[i]} discount={props.discount == true ?(Math.random() * 40) : false}/>)
                         counter += 1
                     }
                 }
@@ -32,18 +32,11 @@ export default function Discounts(){
 
 
     return (
-        <div className="discounts">
-            <h2 className="title--h2">Discounts</h2>
-            <div className="discounts--div">
+        <div className="slide--bar">
+            <h2 className="title--h2">{props.title}</h2>
+            <div className="slide--bar--div">
                 {items}
             </div>
         </div>
     )
 }
-
-            {/* 
-                import bellSvg from "../../../icons/Filled-Bell-2D-SVG.svg"
-                <h3 className="discounts--h3">We love you all so here are some discounts for you <img srcSet={bellSvg} width='24px'/></h3> 
-                <img srcSet={bellSvg} width='24px'/>
-                <img srcSet={bellSvg} width='24px'/>
-            */}
