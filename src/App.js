@@ -35,8 +35,8 @@ export default function App() {
           </>
           }>
           <Route index element={<h2>index</h2>} />
-          <Route path="WomenClothing" element={<h2>Women's clothing</h2>} />
-          <Route path="MenClothing" element={<h2>Men's clothing</h2>} />
+          <Route path="WomanClothing" element={<h2>Women's clothing</h2>} />
+          <Route path="ManClothing" element={<h2>Men's clothing</h2>} />
           <Route path="Jewlery" element={<h2>Jewlery</h2>} />
           <Route path="Electronics" element={<h2>Electronics</h2>} />
         </Route>

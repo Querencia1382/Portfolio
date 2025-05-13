@@ -147,8 +147,6 @@ h1, h2, h3, h4, a {
     ;
     padding-bottom: 1rem;
     box-sizing: border-box;
-    /* border-radius:0 0 24px 24px;
-    margin-bottom: 24px; */
     background-color: white;
 }
 
@@ -331,7 +329,8 @@ h1, h2, h3, h4, a {
     display: block;
     font-size: 1.6rem;
     text-align: center;
-    padding: 2rem 0 0;
+    padding: 2rem 0;
+    width: 100%;
 }
 
 .slide--bar--div {
@@ -340,12 +339,12 @@ h1, h2, h3, h4, a {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 3rem;
-    padding: 3.5rem 3rem;
+    padding: 1rem 3rem;
     margin: 0;
     box-sizing: border-box;
     overflow-x: auto;
     scrollbar-width:thin;
-    scrollbar-color: var(--wine) white;
+    /* scrollbar-color: var(--wine) white; */
 }
 
 .slide--bar--div::-webkit-scrollbar {
@@ -507,3 +506,89 @@ h1, h2, h3, h4, a {
     top: -3px;
     right: 100%;
 } */
+
+.categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 0 2.25rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.categories .title--h2 {
+    padding-bottom: 0;
+    margin-bottom: -1rem;
+}
+
+.categories--a {
+    color: white;
+    font-size: 1.1rem;
+    width: 30vw;
+    min-width: 273px;
+    height: 300px;
+    box-shadow: 0 0 12px 0 var(--wine);
+    border-radius: 24px;
+    position: relative;
+    background-size: cover;
+    transition: 0.2s ease;
+}
+
+.categories--a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #722f3750;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 24px;
+}
+
+.categories--a:hover {
+    transform: scale(1.05);
+}
+
+.categories--a:nth-of-type(1){
+    background-image: url("/public/Pictures/man.jpg");
+    background-position: 0 0;
+}
+
+.categories--a:nth-of-type(1)::after{
+    content: "Man's clothing";
+}
+
+.categories--a:nth-of-type(2){
+    background-image: url("/public/Pictures/woman.jpg");
+    background-position: 0 0;
+}
+
+.categories--a:nth-of-type(2)::after{
+    content: "Woman's clothing";
+}
+
+.categories--a:nth-of-type(3){
+    background-image: url("/public/Pictures/jew.jpg");
+    background-position: center;
+}
+
+.categories--a:nth-of-type(3)::after{
+    content: "Jewlery";
+}
+
+.categories--a:nth-of-type(4){
+    background-image: url("/public/Pictures/elec.jpg");
+    background-position: center;
+}
+
+.categories--a:nth-of-type(4)::after{
+    content: "Electronics";
+    background-position: center;
+}
