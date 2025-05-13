@@ -1,6 +1,6 @@
 import Hero from "./Components/hero";
 import SlideBar from "../-Components/slideBar";
-import MostPopular from "./Components/mostPopulars";
+
 
 
 export default function Home(){
@@ -10,7 +10,12 @@ export default function Home(){
         <Hero />
         <SlideBar discount={true} title={"Discounts"}/>
         <SlideBar discount={false} title={"Most popular"}/>
-        {/* <MostPopular /> */}
         </>
     )
 }
+
+
+        /* 
+            import MostPopular from "./Components/mostPopulars";
+            <MostPopular /> 
+        */

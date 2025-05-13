@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter , Routes , Route , Link } from "react-router-dom"
+import { BrowserRouter , Routes , Route , Link, Outlet } from "react-router-dom"
 import Logo from "../src/icons/VK-SVG.svg"
 import accountSvg from "../src/icons/Account-SVG.svg"
 import cartSvg from "../src/icons/Cart2-SVG.svg"
@@ -28,8 +28,19 @@ export default function App() {
     </nav>
       <Routes>
         <Route path='/' element={<Home />}/>
-        <Route path='/Products' element={<h1>Products</h1>}/>
-        <Route path='/Products/:id' element={<h1>Product</h1>}/>
+        <Route path='/Products' element={
+          <>
+            <h1>Products</h1>
+            <Outlet />
+          </>
+          }>
+          <Route index element={<h2>index</h2>} />
+          <Route path="WomenClothing" element={<h2>Women's clothing</h2>} />
+          <Route path="MenClothing" element={<h2>Men's clothing</h2>} />
+          <Route path="Jewlery" element={<h2>Jewlery</h2>} />
+          <Route path="Electronics" element={<h2>Electronics</h2>} />
+        </Route>
+        <Route path='/Product/:id' element={<h1>Product</h1>}/>
         <Route path='/Account' element={<h1>Account</h1>}/>
         <Route path='/Log-in' element={<h1>Log-in</h1>}/>
         <Route path='/Transactions/:id' element={<h1>Transactions</h1>}/>
