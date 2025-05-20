@@ -508,12 +508,13 @@ h1, h2, h3, h4, a {
 } */
 
 .categories {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 4rem;
-    padding: 0 2.25rem;
+    padding: 0 3rem;
     margin: 0;
     box-sizing: border-box;
 }
@@ -525,10 +526,10 @@ h1, h2, h3, h4, a {
 
 .categories--a {
     color: white;
-    font-size: 1.1rem;
-    width: 30vw;
+    font-size: 1.6rem;
+    flex: 1 1 calc(50% - 5rem);
     min-width: 273px;
-    height: 300px;
+    height: 50dvh;
     box-shadow: 0 0 12px 0 var(--wine);
     border-radius: 24px;
     position: relative;
@@ -562,7 +563,7 @@ h1, h2, h3, h4, a {
 }
 
 .categories--a:nth-of-type(1)::after{
-    content: "Man's clothing";
+    content: "Men's clothing";
 }
 
 .categories--a:nth-of-type(2){
@@ -571,7 +572,7 @@ h1, h2, h3, h4, a {
 }
 
 .categories--a:nth-of-type(2)::after{
-    content: "Woman's clothing";
+    content: "Women's clothing";
 }
 
 .categories--a:nth-of-type(3){
