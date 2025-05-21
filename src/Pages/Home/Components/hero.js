@@ -103,7 +103,7 @@ export default function Hero(){
                     <p>{items[currentItem].description}</p>
                     <div className="detail--sb">
                         <h3>Price : {items[currentItem].price}$</h3>
-                        <Link to="/" className="hero--detail--anchor">Visit</Link>
+                        <Link to="/" className="arrow--anchor">Visit</Link>
                     </div>
                 </div>
                 <div className="hero--btns">

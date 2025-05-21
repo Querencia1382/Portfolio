@@ -2,6 +2,7 @@ import Hero from "./Components/hero";
 import SlideBar from "../-Components/slideBar";
 import Categories from "./Components/categories";
 import PurchaseGuide from "./Components/purchaseGuide";
+import AboutUs from "./Components/aboutUs";
 
 
 
@@ -14,6 +15,7 @@ export default function Home(){
         <SlideBar discount={false} title={"Most popular"}/>
         <Categories />
         <PurchaseGuide/>
+        <AboutUs />
         </>
     )
 }

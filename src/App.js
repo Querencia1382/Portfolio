@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter , Routes , Route , Link, Outlet } from "react-router-dom"
-import Logo from "../src/icons/VK-SVG.svg"
 import accountSvg from "../src/icons/Account-SVG.svg"
 import cartSvg from "../src/icons/Cart2-SVG.svg"
 import loginSvg from "../src/icons/Login2-SVG.svg"

@@ -11,7 +11,7 @@ export default function PurchaseGuide(){
                 <div className="grid--img" alt="img--3"/>
                 <div className="grid--img" alt="img--4"/>
             </div>
-            <div className="guide--details">
+            <div className="details">
                 <h2>Buying guide</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nam culpa quaerat iste repellat. Voluptatibus ad molestias esse nobis fugiat</p>
                 <ol className="guide--list">
