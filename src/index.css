@@ -226,7 +226,8 @@ a {
 }
 
 .detail--img {
-    height: 136px;
+    height: 16dvh;
+    max-height: 136px;
     aspect-ratio: 4/5;
     object-fit: cover;
     border-radius: 12px;
@@ -266,6 +267,9 @@ a {
     text-align: justify;
     line-height: 1.6;
     letter-spacing: 0.3px;
+    max-height: 150px;
+    text-overflow: ellipsis; 
+    overflow: hidden;
 }
 
 .arrow--anchor {
@@ -714,7 +718,7 @@ a {
 }
 
 .about--us .grid--img:nth-of-type(1){
-    background-image: url("../public/Pictures/pay.jpg");
+    background-image: url("../public/Pictures/brnd.jpg");
     grid-area: img--1;
     height: 80%;
     width: 80%;
@@ -723,7 +727,7 @@ a {
 }
 
 .about--us .grid--img:nth-of-type(2){
-    background-image: url("../public/Pictures/bro.jpg");
+    background-image: url("../public/Pictures/hnd.jpg");
     grid-area: img--2;
     width: 100%;
     height: 100%;
@@ -732,7 +736,7 @@ a {
 }
 
 .about--us .grid--img:nth-of-type(3){
-    background-image: url("../public/Pictures/del.jpg");
+    background-image: url("../public/Pictures/pckg.jpg");
     grid-area: img--3;
     height: 100%;
     width: 100%;
@@ -741,7 +745,7 @@ a {
 }
 
 .about--us .grid--img:nth-of-type(4){
-    background-image: url("../public/Pictures/enj.jpg");
+    background-image: url("../public/Pictures/blk.jpg");
     grid-area: img--4;
     width: 80%;
     height: 80%;
