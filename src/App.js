@@ -1,13 +1,18 @@
 import React from 'react';
-import { BrowserRouter , Routes , Route , Link, Outlet } from "react-router-dom"
-import accountSvg from "../src/icons/Account-SVG.svg"
-import cartSvg from "../src/icons/Cart2-SVG.svg"
-import loginSvg from "../src/icons/Login2-SVG.svg"
-import telegramSvg from "../src/icons/Telegram-SVG.svg"
-import instagramSvg from "../src/icons/Instagram-SVG.svg"
-import emailSvg from "../src/icons/Email-SVG.svg"
+import { BrowserRouter , Routes , Route , Link, Outlet } from "react-router-dom";
+import { QueryClient , QueryClientProvider } from '@tanstack/react-query';
+import accountSvg from "../src/icons/Account-SVG.svg";
+import cartSvg from "../src/icons/Cart2-SVG.svg";
+import loginSvg from "../src/icons/Login2-SVG.svg";
+import telegramSvg from "../src/icons/Telegram-SVG.svg";
+import instagramSvg from "../src/icons/Instagram-SVG.svg";
+import emailSvg from "../src/icons/Email-SVG.svg";
 import Home from './Pages/Home/home';
-import MostPopular from './Pages/Home/Components/mostPopulars';
+import Product from './Pages/Product/product';
+
+
+const queryClient = new QueryClient();
+
 
 export default function App() {
 
@@ -25,6 +30,7 @@ export default function App() {
       <Link to="/Cart" className="nav-anchor-btn"><img srcSet={cartSvg} /></Link>
       {account != null ? <Link to="/Account" className="nav-anchor-btn"><img srcSet={accountSvg} style={{width: "30px"}}/></Link> : <Link to="/Log-in" className="nav-anchor-btn"><img srcSet={loginSvg} /></Link>}
     </nav>
+    <QueryClientProvider client={queryClient}>
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/Products' element={
@@ -39,7 +45,7 @@ export default function App() {
           <Route path="Jewlery" element={<h2>Jewlery</h2>} />
           <Route path="Electronics" element={<h2>Electronics</h2>} />
         </Route>
-        <Route path='/Product/:id' element={<h1>Product</h1>}/>
+        <Route path='/Product/:id' element={<Product />}/>
         <Route path='/Account' element={<h1>Account</h1>}/>
         <Route path='/Log-in' element={<h1>Log-in</h1>}/>
         <Route path='/Transactions/:id' element={<h1>Transactions</h1>}/>
@@ -47,7 +53,8 @@ export default function App() {
         <Route path='/About-us' element={<h1>About us</h1>}/>
         <Route path='/Contact-us' element={<h1>Contact us</h1>}/>
       </Routes>
-      <footer className='footer'>
+    </QueryClientProvider>
+    <footer className='footer'>
         <div className='footer-div-1'>
           <h3 className='h3 rm'>VK Boutique</h3>
           <a className='footer--anchor' href=''>
@@ -70,7 +77,7 @@ export default function App() {
           <Link to="/About-us" className="nav-anchor-txt">About us</Link>
         </div>
         <p className='p'>All the rights belong to the VK Boutique website</p>
-      </footer>
+    </footer>
     </BrowserRouter>
   )
 };
