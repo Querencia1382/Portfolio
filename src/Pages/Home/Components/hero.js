@@ -1,3 +1,4 @@
+import { useQuery } from "@tanstack/react-query";
 import React from "react"
 import { Link } from "react-router-dom"
 import rightArrowSvg from "../../../icons/arrow-narrow-right-Svg.svg"
@@ -6,18 +7,14 @@ import leftArrowSvg from "../../../icons/arrow-narrow-left-Svg.svg"
 
 export default function Hero(){
 
-   const [items , setItems] = React.useState(null)
-
-
-   React.useLayoutEffect(() => {
-    const dataFetcher = async () => {
-            const req = await fetch("https://fakestoreapi.com/products")
-            const data = await req.json()
-            setItems(data)
+    const { data : items , isLoading , isError , error } = useQuery({
+        queryKey : ["products"],
+        queryFn : async () => {
+            const request = await fetch(`https://fakestoreapi.com/products`)
+            const data = await request.json()
+            return data
         }
-
-        dataFetcher()
-    },[])
+    })
 
 
     const [currentItem , setCurrent] = React.useState(0)
@@ -64,7 +61,10 @@ export default function Hero(){
     },[])
 
 
-    if(items){
+    if(isLoading){
+        return <h2>is Loading...</h2>
+    }
+    else{
         return (
             <div className="hero">
                 <h2 className="hero--h1">Newest</h2>
@@ -103,7 +103,7 @@ export default function Hero(){
                     <p>{items[currentItem].description}</p>
                     <div className="detail--sb">
                         <h3>Price : {items[currentItem].price}$</h3>
-                        <Link to="/" className="arrow--anchor">Visit</Link>
+                        <Link to={`/Product/${items[currentItem].id}`} className="arrow--anchor">Visit</Link>
                     </div>
                 </div>
                 <div className="hero--btns">
@@ -139,11 +139,6 @@ export default function Hero(){
                     </button>
                 </div>
             </div>
-        )
-    }
-    else {
-        return (
-            <h1>Newest</h1>
         )
     }
 }

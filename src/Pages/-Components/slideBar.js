@@ -56,9 +56,3 @@ export default function SlideBar(props){
         )
     }
 }
-
-// if(props.filterBy){
-//     const request = await fetch(`https://fakestoreapi.com/products/category/${props.searchBy}`)
-//     const data = await request.json()
-//     return data
-// }

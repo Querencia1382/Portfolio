@@ -15,13 +15,13 @@ export default function Item(props){
                     <>
                         <h4 className="item--h4 discounted--h4">{props.item.price}$</h4>
                         <img className="dicsounted--icn" srcSet={rightArrowSvg} width='24px'/>
-                        <Link to={`/Products/${props.item.id}`} className="item--a discounted--a">Only {((100 - props.discount) / 100 * props.item.price).toFixed(2)}$</Link>
+                        <Link to={`/Product/${props.item.id}`} className="item--a discounted--a">Only {((100 - props.discount) / 100 * props.item.price).toFixed(2)}$</Link>
                     </>
                     :
                     <>
                         <h4 className="item--h4">{props.item.price}$</h4>
                         <img className="dicsounted--icn" srcSet={rightArrowSvg} width='24px'/>
-                        <Link to={`/Products/${props.item.id}`} className="item--a">Order</Link>
+                        <Link to={`/Product/${props.item.id}`} className="item--a">Order</Link>
                     </>   
             }
             </div> 
