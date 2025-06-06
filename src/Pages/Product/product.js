@@ -24,6 +24,9 @@ export default function Product(){
         return <h2>is Loading...</h2>
     }
     else {
-        return <SlideBar title={"Similar items"} searchBy={data.category}/>
+        return <>
+            <h2>{data.title}</h2>
+            <SlideBar title={"Similar items"} filterBy={data.category} productID={data.id}/>
+        </>
     }
 }
