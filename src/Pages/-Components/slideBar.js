@@ -10,7 +10,32 @@ export default function SlideBar(props){
         queryFn : async () => {
             const request = await fetch(`https://fakestoreapi.com/products`)
             const data = await request.json()
-            return data
+            if(props.filterBy == true){
+                let filteredList = []
+                for(let i = 0; i < data.length; i++){
+                    if(data[i].category === props.filterBy && data[i].id != props.productID){
+                        filteredList.push(<Item key={data[i].id} item={data[i]} discount={false}/>)
+                    }
+                }
+                return filteredList
+            }
+            else {
+                let counter = 0
+                let displayItems = []
+                let randomValue = 0
+
+                for(let i = 4; i < data.length; i++){
+                    if(counter == 6 || i == data.length - 1){
+                        break
+                    }
+                    randomValue = Math.random() * 10
+                    if(randomValue > 5){
+                        displayItems.push(<Item key={data[i].id} item={data[i]} discount={props.discount == true ?(Math.random() * 40) : false}/>)
+                        counter += 1
+                    }
+                }
+                return displayItems
+            }
         }
     })
 
@@ -18,36 +43,19 @@ export default function SlideBar(props){
     if(isLoading){
         return <h2>is Loading...</h2>
     }
-
-
     else {
-        let counter = 0
-        let displayItems = []
-        let randomValue = 0
-
-        for(let i = 4; i < data.length; i++){
-            if(counter == 6 || i == data.length - 1){
-                break
-            }
-            randomValue = Math.random() * 10
-            if(randomValue > 5){
-                displayItems.push(<Item key={data[i].id} item={data[i]} discount={props.discount == true ?(Math.random() * 40) : false}/>)
-                counter += 1
-            }
-        }
-        
         return (
             <div className="slide--bar">
                 <h2 className="title--h2">{props.title}</h2>
                 <div className="slide--bar--div">
-                    {displayItems}
+                    {data}
                 </div>
             </div>
         )
     }
 }
 
-// if(props.searchBy){
+// if(props.filterBy){
 //     const request = await fetch(`https://fakestoreapi.com/products/category/${props.searchBy}`)
 //     const data = await request.json()
 //     return data
