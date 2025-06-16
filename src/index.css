@@ -364,83 +364,91 @@ a {
     border-radius: 12px;
 }
 
-.item {
-    flex: 0 0 fit-content;
-    min-width: fit-content;
+.card {
+    width: 300px;
+    padding: 16px 20px 20px;
+    margin-bottom: 36px;
+    box-sizing: border-box;
+    border-radius: 24px;
     display: flex;
     flex-direction: column;
-    justify-items: flex-start;
-    align-items: center;
     gap: 12px;
-    padding: 32px;
-    margin: 0;
-    box-sizing: border-box;
-    box-shadow: 0 0 12px 0 var(--wine);
-    border-radius: 24px;
+    box-shadow: 0 0 12px 0 gray;
 }
 
-.item--img {
+.card--header{
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+}
+
+.card--icon {
+    margin-left: 2px;
+}
+
+.card--img {
+    height: 175px;
+    width: 160px;
     object-fit: contain;
-    width: 200px;
-    aspect-ratio: 1/1;
-    margin: 12px 0;
+    margin: 8px auto;
 }
 
-.item--h2 {
-    font-size: 1.25rem;
-    width: 250px;
+.card--title {
+    font-size: 20px;
+    width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis; 
     overflow: hidden;
 }
 
-.item--div {
-    width: 250px;
+.card--price {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.card--footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 12px;
 }
 
-.item--h4 {
-    font-size: 1.25rem;
-    box-shadow: 0 1px black;
+.card--footer h3 {
+    font-size: 20px;
+    line-height: 1;
 }
 
-.item--a {
-    width: 100%;
-    text-align: center;
+.card--anchor {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    background-color: var(--wine);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    margin: 0;
-    font-size: 1rem;
-    border-radius: 0.5rem;
-    transition: 0.2s ease;
-    cursor: pointer;
+    font-size: 20px;
+    color: black;
+    box-shadow: 0 1px 0 0 black;
 }
 
-.item--a:hover {
-    box-shadow: 0 0 8px 0 var(--wine);
+.discounted--card--container {
+    display: flex;
+    gap: 6px;
 }
 
-.discounted--h4 {
-    display: inline-flex;
+.discounted {
+    color: gray;
+    position: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
-.discounted--h4::after {
+.discounted::after {
     content: "";
     position: absolute;
     width: calc(100% + 6px);
     height: 1px;
-    background-color: black;
+    background-color: gray;
     transform: rotateZ(15deg);
 }
-
 
 /* .most--popular {
     width: 100%;
@@ -764,3 +772,80 @@ a {
 .about--us .details .arrow--anchor {
     margin-right: 24px;
 }
+
+/* .item {
+    flex: 0 0 fit-content;
+    min-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: center;
+    gap: 12px;
+    padding: 32px;
+    margin: 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 12px 0 var(--wine);
+    border-radius: 24px;
+}
+
+.item--img {
+    object-fit: contain;
+    width: 200px;
+    aspect-ratio: 1/1;
+    margin: 12px 0;
+}
+
+.item--h2 {
+    font-size: 1.25rem;
+    width: 250px;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    overflow: hidden;
+}
+
+.item--div {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.item--h4 {
+    font-size: 1.25rem;
+    box-shadow: 0 1px black;
+}
+
+.item--a {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--wine);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    margin: 0;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.item--a:hover {
+    box-shadow: 0 0 8px 0 var(--wine);
+}
+
+.discounted--h4 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.discounted--h4::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 6px);
+    height: 1px;
+    background-color: black;
+    transform: rotateZ(15deg);
+} */

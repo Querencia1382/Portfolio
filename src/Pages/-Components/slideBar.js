@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react"
-import Item from "./item"
+import Item from "./card"
 
 
 export default function SlideBar(props){
@@ -39,7 +39,7 @@ export default function SlideBar(props){
                 }
                 randomValue = Math.random() * 10
                 if(randomValue > 5){
-                    displayList.push(<Item key={data[i].id} item={data[i]} discount={props.discount == true ?(Math.random() * 40) : false}/>)
+                    displayList.push(<Item key={data[i].id} item={data[i]} discount={props.discount == true ?(Math.random() * (40 - 20) + 20) : false}/>)
                     counter += 1
                 }
             }
