@@ -6,7 +6,7 @@ import Loading from "./loading";
 
 export default function SlideBar({ filterBy , productID , discount }){
 
-    const { data , isLoading , isError , error } = useQuery({
+    const { data , isLoading ,isSuccess , isError , error } = useQuery({
         queryKey : ["products"],
         queryFn : async () => {
             const request = await fetch(`https://fakestoreapi.com/products`)
@@ -16,7 +16,7 @@ export default function SlideBar({ filterBy , productID , discount }){
     })
 
 
-    if(isLoading){
+    if(!isSuccess){
         return <Loading width="calc(100% - 48px)" height="465px" margin="16px 24px" size={48} borderRadius="24px"/>
     }
     else {

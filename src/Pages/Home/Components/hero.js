@@ -8,12 +8,16 @@ import Loading from "../../-Components/loading";
 
 export default function Hero(){
 
-    const { data : items , isLoading , isError , error } = useQuery({
+    const { data : items , isSuccess , isError , error } = useQuery({
         queryKey : ["products"],
         queryFn : async () => {
-            const request = await fetch(`https://fakestoreapi.com/products`)
-            const data = await request.json()
-            return data
+            try {
+                const request = await fetch(`https://fakestoreapi.com/products`)
+                const data = await request.json()
+                return data
+            }catch(error){
+                console.log(error)
+            }
         }
     })
 
@@ -62,7 +66,7 @@ export default function Hero(){
     },[])
 
 
-    if(isLoading || isError){
+    if(!isSuccess){
         return <Loading width="calc(100% - 48px)" height="calc(100dvh - 63px - 48px)" margin="16px 24px" size={56} borderRadius="24px"/>
     }
     else{

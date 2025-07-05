@@ -19,11 +19,11 @@ export default function App() {
   return (
     <>
       <nav className='nav-bar'>
-        <h1 className='h3 ma'>VK Boutique</h1>
-        <Link to="/" className="nav-anchor-txt">Home</Link>
-        <Link to="/Products" className="nav-anchor-txt">Products</Link>
-        <Link to="/Contact-us" className="nav-anchor-txt">Contact us</Link>
-        <Link to="/About-us" className="nav-anchor-txt">About us</Link>
+        <h1 style={{ fontSize : "26px" , marginRight : "auto" }}>VK Boutique</h1>
+        <Link to="/" className="anchor--txt">Home</Link>
+        <Link to="/Products" className="anchor--txt">Products</Link>
+        <Link to="/Contact-us" className="anchor--txt">Contact us</Link>
+        <Link to="/About-us" className="anchor--txt">About us</Link>
         <Link to="/Cart" className="nav-anchor-btn"><img srcSet={cartSvg} /></Link>
         {account != null ? <Link to="/Account" className="nav-anchor-btn"><img srcSet={accountSvg} style={{width: "30px"}}/></Link> : <Link to="/Log-in" className="nav-anchor-btn"><img srcSet={loginSvg} /></Link>}
       </nav>
@@ -50,28 +50,28 @@ export default function App() {
         <Route path='/Contact-us' element={<h1>Contact us</h1>}/>
       </Routes>
       <footer className='footer'>
-          <div className='footer-div-1'>
-            <h3 className='h3 rm'>VK Boutique</h3>
+          <div style={{ display : "flex" , gap : "32px" }}>
+            <h3 style={{ fontSize : "26px" , marginRight : "48px" }}>VK Boutique</h3>
             <a className='footer--anchor' href=''>
               <img srcSet={telegramSvg} className='icon'/>
-              <h3 className='h3'>Telegram</h3>
+              <h3>Telegram</h3>
             </a>
             <a className='footer--anchor' href=''>
               <img srcSet={instagramSvg} className='icon'/>
-              <h3 className='h3'>Instagram</h3>
+              <h3>Instagram</h3>
             </a>
             <a className='footer--anchor' href=''>
               <img srcSet={emailSvg} className='icon'/>
-              <h3 className='h3'>Email</h3>
+              <h3>Email</h3>
             </a>
           </div>
-          <div className='footer-div-2'>
-            <Link to="/" className="nav-anchor-txt">Home</Link>
-            <Link to="/Products" className="nav-anchor-txt">Products</Link>
-            <Link to="/Contact-us" className="nav-anchor-txt">Contact us</Link>
-            <Link to="/About-us" className="nav-anchor-txt">About us</Link>
+          <div style={{ display : "flex" , gap : "24px" }}>
+            <Link to="/" className="anchor--txt">Home</Link>
+            <Link to="/Products" className="anchor--txt">Products</Link>
+            <Link to="/Contact-us" className="anchor--txt">Contact us</Link>
+            <Link to="/About-us" className="anchor--txt">About us</Link>
           </div>
-          <p className='p'>All the rights belong to the VK Boutique website</p>
+          <p>All the rights belong to the VK Boutique website</p>
       </footer>
     </>
   )

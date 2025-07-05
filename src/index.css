@@ -5,6 +5,7 @@
 }
 
 :root {
+    font-family: Poppins;
     --dutch-white : #efdfbb;
     --wine : #722f37;
 }
@@ -12,11 +13,6 @@
 body {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    font-family: Poppins;
-    /* background-image: radial-gradient(at 50% 50%, var(--wine), var(--dutch-white));
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 h1, h2, h3, h4 {
@@ -31,37 +27,21 @@ a {
 
 .nav-bar {
     display: flex;
-    justify-content:  baseline;
     align-items: center;
     padding: 12px 18px;
     margin: 0;
     gap: 24px;
     box-sizing: border-box;
-    background-color: white;
 }
 
-.ma {
-    margin-right: auto;
-}
-
-.nav-img {
-    width: 56px;
-    margin: 0;
-}
-
-.h3 {
-    font-size: 26px;
-}
-
-.nav-anchor-txt {
+.anchor--txt {
     font-size: 16px;
     text-decoration: none;
     color: black;
-    cursor: pointer;
 }
 
-.nav-anchor-txt:hover {
-    box-shadow: 0 1px var(--wine);
+.anchor--txt:hover {
+    box-shadow: 0 1px black;
 }
 
 .nav-anchor-btn {
@@ -82,19 +62,11 @@ a {
 
 .footer {
     padding: 16px;
-    background-color: white;
-    /* border-radius: 24px 24px 0 0; */
-}
-
-.footer-div-1 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 32px;
-}
-
-.rm {
-    margin-right: 48px;
+    gap: 16px;
 }
 
 .footer--anchor {
@@ -105,8 +77,6 @@ a {
     padding: 4px;
     color: black;
     text-decoration: none;
-    transition: 0.3s linear;
-    cursor: pointer;
 }
 
 .footer--anchor:hover {
@@ -118,21 +88,11 @@ a {
     aspect-ratio: 1/1;
 }
 
-.footer--anchor .h3 {
+.footer--anchor h3 {
     font-size: 16px;
 }
 
-.footer-div-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    margin: 16px 0;
-}
-
-.p {
-    width: 100%;
-    text-align: center;
+.footer p {
     font-size: 12px;
     margin: 0;
     padding: 0;
@@ -149,7 +109,7 @@ a {
     "img detail"
     "btns btns"
     ;
-    padding-bottom: 1rem;
+    padding-bottom: 16px;
     box-sizing: border-box;
     background-color: white;
 }
@@ -333,17 +293,13 @@ a {
 
 .title--h2 {
     display: block;
-    font-size: 1.6rem;
     text-align: center;
-    padding: 2rem 0;
-    width: 100%;
+    font-size: 26px;
+    padding: 24px 0;
 }
 
 .slide--bar {
-    width: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     gap: 48px;
     padding: 16px 24px;
     margin: 0;
