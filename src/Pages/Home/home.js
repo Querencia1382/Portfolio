@@ -11,17 +11,13 @@ export default function Home(){
     return(
         <>
         <Hero />
-        <SlideBar discount={true} title={"Discounts"}/>
-        <SlideBar discount={false} title={"Most popular"}/>
+        <h2 className="title--h2">Discounts</h2>
+        <SlideBar discount={true}/>
+        <h2 className="title--h2">Most popular</h2>
+        <SlideBar discount={false}/>
         <Categories />
         <PurchaseGuide/>
         <AboutUs />
         </>
     )
 }
-
-
-        /* 
-            import MostPopular from "./Components/mostPopulars";
-            <MostPopular /> 
-        */

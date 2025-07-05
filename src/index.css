@@ -331,10 +331,6 @@ a {
     object-fit: cover;
 }
 
-.slide--bar {
-    background-color: white;
-}
-
 .title--h2 {
     display: block;
     font-size: 1.6rem;

@@ -26,7 +26,8 @@ export default function Product(){
     else {
         return <>
             <h2>{data.title}</h2>
-            <SlideBar title={"Similar items"} filterBy={data.category} productID={data.id}/>
+            <h2 className="title--h2">Similar items</h2>
+            <SlideBar filterBy={data.category} productID={data.id}/>
         </>
     }
 }

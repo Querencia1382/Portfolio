@@ -3,7 +3,7 @@ import React from "react"
 import Item from "./card"
 
 
-export default function SlideBar(props){
+export default function SlideBar({ filterBy , productID , discount }){
 
     const { data , isLoading , isError , error } = useQuery({
         queryKey : ["products"],
@@ -23,9 +23,9 @@ export default function SlideBar(props){
         let displayList = []
 
 
-        if(props.filterBy){
+        if(filterBy){
             for(let i = 0; i < data.length; i++){
-                if(data[i].category === props.filterBy && data[i].id != props.productID){
+                if(data[i].category === filterBy && data[i].id != productID){
                     displayList.push(<Item key={data[i].id} item={data[i]} discount={false}/>)
                 }
             }
@@ -39,7 +39,7 @@ export default function SlideBar(props){
                 }
                 randomValue = Math.random() * 10
                 if(randomValue > 5){
-                    displayList.push(<Item key={data[i].id} item={data[i]} discount={props.discount == true ?(Math.random() * (40 - 20) + 20) : false}/>)
+                    displayList.push(<Item key={data[i].id} item={data[i]} discount={discount == true ?(Math.random() * (40 - 20) + 20) : false}/>)
                     counter += 1
                 }
             }
@@ -47,11 +47,8 @@ export default function SlideBar(props){
 
         
         return (
-            <div className="slide--bar">
-                <h2 className="title--h2">{props.title}</h2>
-                <div className="slide--bar--div">
-                    {displayList}
-                </div>
+            <div className="slide--bar--div">
+                {displayList}
             </div>
         )
     }
