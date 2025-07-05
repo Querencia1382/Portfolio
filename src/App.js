@@ -65,7 +65,7 @@ export default function App() {
               <h3>Email</h3>
             </a>
           </div>
-          <div style={{ display : "flex" , gap : "24px" }}>
+          <div style={{ display : "flex" , flexWrap : "wrap" , gap : "24px" }}>
             <Link to="/" className="anchor--txt">Home</Link>
             <Link to="/Products" className="anchor--txt">Products</Link>
             <Link to="/Contact-us" className="anchor--txt">Contact us</Link>
