@@ -3,6 +3,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import rightArrowSvg from "../../../icons/arrow-narrow-right-Svg.svg"
 import leftArrowSvg from "../../../icons/arrow-narrow-left-Svg.svg"
+import Loading from "../../-Components/loading";
 
 
 export default function Hero(){
@@ -61,8 +62,8 @@ export default function Hero(){
     },[])
 
 
-    if(isLoading){
-        return <h2>is Loading...</h2>
+    if(isLoading || isError){
+        return <Loading width="calc(100% - 48px)" height="calc(100dvh - 63px - 48px)" margin="16px 24px" size={56} borderRadius="24px"/>
     }
     else{
         return (

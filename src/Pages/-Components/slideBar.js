@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react"
 import Item from "./card"
+import Loading from "./loading";
 
 
 export default function SlideBar({ filterBy , productID , discount }){
@@ -16,7 +17,7 @@ export default function SlideBar({ filterBy , productID , discount }){
 
 
     if(isLoading){
-        return <h2>is Loading...</h2>
+        return <Loading width="calc(100% - 48px)" height="465px" margin="16px 24px" size={48} borderRadius="24px"/>
     }
     else {
 
@@ -47,7 +48,7 @@ export default function SlideBar({ filterBy , productID , discount }){
 
         
         return (
-            <div className="slide--bar--div">
+            <div className="slide--bar">
                 {displayList}
             </div>
         )

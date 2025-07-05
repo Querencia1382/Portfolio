@@ -339,24 +339,24 @@ a {
     width: 100%;
 }
 
-.slide--bar--div {
+.slide--bar {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 3rem;
-    padding: 1rem 1.5rem;
+    gap: 48px;
+    padding: 16px 24px;
     margin: 0;
     box-sizing: border-box;
     overflow-x: auto;
     scrollbar-width:thin;
 }
 
-.slide--bar--div::-webkit-scrollbar {
+.slide--bar::-webkit-scrollbar {
     width: 12px;
 }
 
-.slide--bar--div::-webkit-scrollbar-track-piece {
+.slide--bar::-webkit-scrollbar-track-piece {
     border-radius: 12px;
 }
 
@@ -699,4 +699,17 @@ a {
 
 .about--us .details .arrow--anchor {
     margin-right: 24px;
+}
+
+.loading {
+    animation: Loading 2s ease infinite;
+}
+
+@keyframes Loading {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
