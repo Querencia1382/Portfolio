@@ -11,13 +11,16 @@ import ProductPage from './Pages/Product/productPage';
 import Test from './Pages/About-us/test';
 
 
+export const accountContext = React.createContext(null)
+
+
 export default function App() {
 
-  const [account , setAccount] = React.useState(null)
+  const [account , setAccount] = React.useState(0)
 
 
   return (
-    <>
+    <accountContext.Provider value={account}>
       <nav className='nav-bar'>
         <h1 style={{ fontSize : "26px" , marginRight : "auto" }}>VK Boutique</h1>
         <Link to="/" className="anchor--txt">Home</Link>
@@ -73,6 +76,6 @@ export default function App() {
           </div>
           <p>All the rights belong to the VK Boutique website</p>
       </footer>
-    </>
+    </accountContext.Provider>
   )
 };
