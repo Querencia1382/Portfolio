@@ -7,7 +7,7 @@ import telegramSvg from "../src/icons/Telegram-SVG.svg";
 import instagramSvg from "../src/icons/Instagram-SVG.svg";
 import emailSvg from "../src/icons/Email-SVG.svg";
 import Home from './Pages/Home/home';
-import Product from './Pages/Product/product';
+import ProductPage from './Pages/Product/productPage';
 import Test from './Pages/About-us/test';
 
 
@@ -41,7 +41,7 @@ export default function App() {
           <Route path="Jewlery" element={<h2>Jewlery</h2>} />
           <Route path="Electronics" element={<h2>Electronics</h2>} />
         </Route>
-        <Route path='/Product/:id' element={<Product />}/>
+        <Route path='/Product/:id' element={<ProductPage />}/>
         <Route path='/Account' element={<h1>Account</h1>}/>
         <Route path='/Log-in' element={<h1>Log-in</h1>}/>
         <Route path='/Transactions/:id' element={<h1>Transactions</h1>}/>

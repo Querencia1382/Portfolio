@@ -1,9 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import SlideBar from "../-Components/slideBar";
+import Loading from "../-Components/loading";
+import Product from "./Components/product";
 
 
-export default function Product(){
+export default function ProductPage(){
 
     const param = useParams().id
 
@@ -21,11 +23,11 @@ export default function Product(){
 
 
     if(isLoading){
-        return <h2>is Loading...</h2>
+        return <Loading width="calc(100% - 48px)" height="calc(100dvh - 63px - 48px)" margin="16px 24px" size={56} borderRadius="24px"/>
     }
     else {
         return <>
-            <h2>{data.title}</h2>
+            <Product product={data}/>
             <h2 className="title--h2">Similar items</h2>
             <SlideBar filterBy={data.category} productID={data.id}/>
         </>
