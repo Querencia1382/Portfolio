@@ -1,17 +1,20 @@
+//Dependecies import
 import React from 'react';
 import { Routes , Route , Link, Outlet } from "react-router-dom";
+//SVG imports
 import accountSvg from "../src/icons/Account-SVG.svg";
 import cartSvg from "../src/icons/Cart2-SVG.svg";
 import loginSvg from "../src/icons/Login2-SVG.svg";
 import telegramSvg from "../src/icons/Telegram-SVG.svg";
 import instagramSvg from "../src/icons/Instagram-SVG.svg";
 import emailSvg from "../src/icons/Email-SVG.svg";
+//Page imports
 import Home from './Pages/Home/home';
 import ProductPage from './Pages/Product/productPage';
 import Test from './Pages/About-us/test';
 
 
-export const accountContext = React.createContext(null)
+export const accountContext = React.createContext(null);
 
 
 export default function App() {
@@ -28,7 +31,7 @@ export default function App() {
         <Link to="/Contact-us" className="anchor--txt">Contact us</Link>
         <Link to="/About-us" className="anchor--txt">About us</Link>
         <Link to="/Cart" className="nav-anchor-btn"><img srcSet={cartSvg} /></Link>
-        {account != null ? <Link to="/Account" className="nav-anchor-btn"><img srcSet={accountSvg} style={{width: "30px"}}/></Link> : <Link to="/Log-in" className="nav-anchor-btn"><img srcSet={loginSvg} /></Link>}
+        {account != 0 ? <Link to="/Account" className="nav-anchor-btn"><img srcSet={accountSvg} style={{width: "30px"}}/></Link> : <Link to="/Log-in" className="nav-anchor-btn"><img srcSet={loginSvg} /></Link>}
       </nav>
       <Routes>
         <Route path='/' element={<Home />}/>

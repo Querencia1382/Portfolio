@@ -15,6 +15,7 @@ export default function Home(){
         <SlideBar discount={true}/>
         <h2 className="title--h2">Most popular</h2>
         <SlideBar discount={false}/>
+        <h2 className="title--h2">Categories</h2>
         <Categories />
         <PurchaseGuide/>
         <AboutUs />
