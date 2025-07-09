@@ -331,8 +331,9 @@ a {
 .card--header{
     font-size: 16px;
     line-height: 1.5;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    gap: 2px;
 }
 
 .card--icon {
@@ -637,6 +638,91 @@ a {
 
 .about--us .details h2 {
     align-self: start;
+}
+
+.product {
+    height: calc(100dvh - 63px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 96px;
+    padding: 64px 12%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.product--img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.product--form {
+    width: 400px;
+}
+
+.product--form h2 {
+    font-size: 26px;
+    margin-right: 8px;
+}
+
+.product--form p {
+    font-size: 16px;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.product--radio {
+    display: none;
+}
+
+.product--label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    aspect-ratio: 1/1;
+    margin-bottom: 16px;
+    margin-left: 18px;
+    cursor: pointer;
+    box-shadow: 0 1px 0 0 gray;
+    box-sizing: border-box;
+}
+
+.product--radio:checked + .product--label  {
+    box-shadow: 0 2px 0 0 black;
+}
+
+.product--color--label {
+    padding: 8px;
+}
+
+.product--color--label div {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.product--label--error {
+    display: inline-block;
+    color: rgb(143, 0, 0);
+    margin-left: 24px;
+}
+
+.product--btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 1px 0 0 black;
+    cursor: pointer;
+}
+
+.product--btn:hover {
+    box-shadow: 0 2px 0 0 black;
 }
 
 .loading {

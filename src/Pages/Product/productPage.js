@@ -1,8 +1,10 @@
+//Dependecies import
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
+//Components import
+import Product from "./Components/product";
 import SlideBar from "../-Components/slideBar";
 import Loading from "../-Components/loading";
-import Product from "./Components/product";
 
 
 export default function ProductPage(){
